@@ -1,0 +1,31 @@
+*{
+    padding:0%;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Inter;
+}
+/* body{
+    
+} */
+
+:root{
+    --cor_fundo: #33658A;
+    --cor_cabeca: #1A3342;
+    --cor_menu: #86BBD8;
+}
+#cabecalho{
+    background-color: var(--cor_cabeca);
+    color: white
+}
+body{
+    background-color: var(--cor_menu);
+}
+#menu{
+    background-color: var(--cor_menu);
+    max-width: 45dvh;
+}
+#imagens{
+    max-width: 10vh;
+    max-height: 10vh;
+}
+
