@@ -1,0 +1,147 @@
+*{
+    padding:0%;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Inter;
+}
+
+:root{
+    --cor_fundo: #33658A;
+    --cor_cabeca: #1A3342;
+    --cor_menu: #86BBD8;
+}
+
+body{
+    background-color: var(--cor_fundo);
+    justify-content: center;
+}
+
+#cabecalho{
+    height: 130px;
+    background-color: var(--cor_cabeca);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 0 20px;
+    font-size: 30px;
+    line-height: 120px;
+}
+
+#lampada {
+    width: 90px;
+    height: 90px;
+}
+
+#menu{
+    border-radius: 10px;
+    width: 90px;
+    height: 90px;
+    padding: 10px 0;
+}
+
+#form {
+    background-color: var(--cor_menu);
+    width: 350px;
+    height: 450px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 17px;
+    margin: 80px auto;
+}
+
+#formulario {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+input{
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    margin: 20px;
+    user-select: text;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.2s ease;
+}
+
+input:hover {
+    transform: scale(1.05);
+}
+
+::placeholder{
+    font-size: 20px;
+}
+
+label{
+    display: flex;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+button{
+    background-color:  #119DA4;
+    width: 90px;
+    height: 45px;
+    border: none;
+    border-radius: 15px;  
+    font-size: 20px;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    margin: 20px;
+    font-size: 20px;
+    transition: transform 0.2s ease;
+}
+
+a:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+#rodape img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 80px auto;
+}
+
+#logo {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    width: 150px;
+    transition: transform 0.2s ease;
+}
+
+#logo:hover {
+    transform: scale(1.05);
+}
+
+#formulario label {
+    width: 300px;
+    text-align: left;
+}
