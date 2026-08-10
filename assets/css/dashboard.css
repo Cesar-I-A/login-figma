@@ -9,6 +9,8 @@
     --cor_fundo: #33658A;
     --cor_cabeca: #1A3342;
     --cor_menu: #86BBD8;
+    --cor_cinza: #626260;
+    --cor_estranha: #03888D;
 }
 
 body{
@@ -17,6 +19,7 @@ body{
 }
 
 #cabecalho{
+    position: sticky; top: 0; width: 100%; z-index: 1000;
     height: 130px;
     background-color: var(--cor_cabeca);
     color: white;
@@ -49,68 +52,9 @@ body{
     transform: scale(1.20);
 }
 
-#form {
-    background-color: var(--cor_menu);
-    width: 350px;
-    height: 450px;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    border-radius: 17px;
-    margin: 80px auto;
-}
-
-#formulario {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-}
-
-input{
-    width: 300px;
-    height: 40px;
-    border-radius: 5px;
-    border: none;
-    margin: 20px;
-    user-select: text;
-    font-size: 18px;
-    text-align: center;
-    padding: 10px;
-    transition: transform 0.2s ease;
-}
-
-input:hover {
-    transform: scale(1.05);
-}
 
 ::placeholder{
     font-size: 20px;
-}
-
-label{
-    display: flex;
-    font-size: 25px;
-    cursor: pointer;
-}
-
-button{
-    background-color:  #119DA4;
-    width: 90px;
-    height: 45px;
-    border: none;
-    border-radius: 15px;  
-    font-size: 20px;
-    margin: 10px;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-button:hover {
-    transform: scale(1.05);
 }
 
 a {
@@ -126,9 +70,12 @@ a:hover {
 }
 
 
-
-
-#rodape img {
+#logo {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 150px;
+    transition: transform 0.2s ease;
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -139,19 +86,13 @@ a:hover {
     
 }
 
-#logo {
-    position: fixed;
-    left: 20px;
-    bottom: 20px;
-    width: 150px;
-    transition: transform 0.2s ease;
-}
-
 #logo:hover {
     transform: scale(1.05);
 }
 
-#formulario label {
-    width: 300px;
-    text-align: left;
+.lista{
+    background-color:var(--cor_estranha);
+    width:60%;
+    height: 40%;
+
 }

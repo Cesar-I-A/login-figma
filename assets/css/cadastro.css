@@ -17,6 +17,7 @@ body{
 }
 
 #cabecalho{
+    position: sticky; top: 0; width: 100%; z-index: 1000;
     height: 130px;
     background-color: var(--cor_cabeca);
     color: white;
