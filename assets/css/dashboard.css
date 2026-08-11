@@ -60,7 +60,6 @@ body{
 a {
     text-decoration: none;
     color: black;
-    margin: 20px;
     font-size: 20px;
     transition: transform 0.2s ease;
 }
@@ -82,7 +81,7 @@ a:hover {
     align-content: center;
     text-align: center;
     align-items: center;
-    margin: 80px auto;
+    margin-top: 180px;
     
 }
 
@@ -90,9 +89,73 @@ a:hover {
     transform: scale(1.05);
 }
 
-.lista{
+.card{
     background-color:var(--cor_estranha);
-    width:60%;
-    height: 40%;
+    width:250px;
+    height: 300px;
+    margin: 50px;
+    border-radius: 15px;
+    
+}
 
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.info {
+    
+    border:black 20px;
+    display: flex;
+    flex-direction: column;
+    
+}
+#titulo {
+    
+    color:rgb(0, 0, 0);
+    align-content: center;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 40px;
+    margin-top:20px;
+}
+.cons_comodo {
+    color:rgb(246, 154, 154);
+    font-size: 15px;
+    line-height: 50px;
+}
+.n_comodo {
+    background-color:var(--cor_cinza);
+    color:rgb(255, 255, 255);
+    font-size: 25px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 50px;
+    line-height: 50px;
+}
+.user_comodo{
+    margin-top: 180px;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+#menu_aberto{
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.2s ease;
+    background-color: var(--cor_cinza);
+    color: white;
+
+}
+#menu-container:hover #menu_aberto {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.05);
 }
