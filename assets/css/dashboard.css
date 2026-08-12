@@ -1,5 +1,5 @@
 *{
-    padding:0%;
+    padding:0;
     margin: 0;
     box-sizing: border-box;
     font-family: Inter;
@@ -15,7 +15,7 @@
 
 body{
     background-color: var(--cor_fundo);
-    justify-content: center;
+    
 }
 
 #cabecalho{
@@ -25,14 +25,55 @@ body{
     color: white;
     display: flex;
     justify-content: space-between;
-    align-content: center;
-    padding: 0 20px;
     font-size: 30px;
-    line-height: 120px;
+    align-items: center;
+}
+#menu{
+    border-radius: 10px;
+    width: 90px;
+    height: 80px;
+}
+#menu-container{
+    border-radius: 10px;
+    width: 90px;
+    height: 80px;
+    
 }
 
+#menu:hover {
+    transform: scale(1.20);
+}
+#menu_aberto{
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.2s ease;
+    background-color: var(--cor_cinza);
+    width: 200px;
+    border-radius: 15px;
+    position: absolute;
+    right: 0;
+    gap: 150px;
+    
+    
+}
+#menu-container:hover #menu_aberto {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.05);
+    
+}
+.text_menu{
+   color:rgb(0, 0, 0);
+   background-color: rgb(255, 255, 255);
+   font-size: small;
+   border-radius: 15px;
+   width: 10px;
+   height: 5px;
+   /* margin: 50px; */
+   border: 3px solid black;
+   padding: 10px;
+}
 #lampada {
-    margin-top: 20px;
     width: 90px;
     height: 90px;
     transition: transform 0.2s ease;
@@ -41,47 +82,26 @@ body{
     transform: scale(1.20);
 }
 
-#menu{
-    border-radius: 10px;
-    width: 90px;
-    height: 90px;
-    margin-top: 20px;
-
-}
-#menu:hover {
-    transform: scale(1.20);
-}
-
-
-::placeholder{
-    font-size: 20px;
-}
 
 a {
     text-decoration: none;
     color: black;
     font-size: 20px;
-    transition: transform 0.2s ease;
 }
 
-a:hover {
-    transform: scale(1.05);
-}
 
 
 #logo {
     position: fixed;
     right: 20px;
     bottom: 20px;
-    width: 150px;
     transition: transform 0.2s ease;
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    align-content: center;
     text-align: center;
     align-items: center;
-    margin-top: 180px;
+    
     
 }
 
@@ -93,11 +113,14 @@ a:hover {
     background-color:var(--cor_estranha);
     width:250px;
     height: 300px;
-    margin: 50px;
     border-radius: 15px;
+    transition: transform 0.2s ease;
+    border: 3px solid black;
     
 }
-
+.card:hover {
+    transform: scale(1.05);
+}
 ul {
     display: flex;
     flex-direction: row;
@@ -110,7 +133,7 @@ ul {
 
 .info {
     
-    border:black 20px;
+    
     display: flex;
     flex-direction: column;
     
@@ -118,44 +141,31 @@ ul {
 #titulo {
     
     color:rgb(0, 0, 0);
-    align-content: center;
-    align-content: center;
     text-align: center;
     align-items: center;
     font-size: 40px;
-    margin-top:20px;
+    margin-bottom: 20px;
 }
 .cons_comodo {
     color:rgb(246, 154, 154);
     font-size: 15px;
-    line-height: 50px;
+    /* line-height: 50px; */
 }
-.n_comodo {
+.nome_comodo {
     background-color:var(--cor_cinza);
     color:rgb(255, 255, 255);
     font-size: 25px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     height: 50px;
-    line-height: 50px;
+    width:245px;
 }
-.user_comodo{
-    margin-top: 180px;
-    font-size: 18px;
-    display: flex;
-    justify-content: space-between;
-    padding: 0px 10px;
-}
-#menu_aberto{
-    opacity: 0;
-    visibility: hidden;
-    transition: transform 0.2s ease;
-    background-color: var(--cor_cinza);
-    color: white;
 
-}
-#menu-container:hover #menu_aberto {
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1.05);
+.graficos{
+    background-color: yellow;
+    width: 50px;
+    height: 100px;
+    display:flex;
+    flex-direction: column-reverse;
+    top:150px
 }
