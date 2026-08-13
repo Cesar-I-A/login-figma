@@ -30,60 +30,64 @@ body{
 }
 #menu{
     border-radius: 10px;
-    width: 80px;
+    width: 90px;
     height: 80px;
 }
 #menu-container{
-    position: relative;
     border-radius: 10px;
-    width: 80px;
+    width: 90px;
     height: 80px;
+    
 }
 
+#menu:hover {
+    transform: scale(1.20);
+}
 #menu_aberto{
     opacity: 0;
     visibility: hidden;
-    transition: all 0.2s ease;
+    transition: transform 0.2s ease;
     background-color: var(--cor_cinza);
     width: 200px;
     border-radius: 15px;
     position: absolute;
     right: 0;
-    gap: 10px;
-    display: flex;
-    flex-direction: column;
-    padding: 12px;
+    gap: 150px;
+    
+    
+}
+#menu-container:hover #menu_aberto {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.05);
+    
+}
+.text_menu{
+   color:rgb(0, 0, 0);
+   background-color: rgb(255, 255, 255);
+   font-size: small;
+   border-radius: 15px;
+   width: 10px;
+   height: 5px;
+   /* margin: 50px; */
+   border: 3px solid black;
+   padding: 10px;
 }
 #lampada {
     width: 90px;
     height: 90px;
     transition: transform 0.2s ease;
 }
-
-#menu:hover, #lampada:hover {
-    transform: scale(1.15);
-}
-
-#menu-container:hover #menu_aberto {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(5px);
-}
-.text_menu{
-    color: rgb(0, 0, 0);
-    background-color: rgb(255, 255, 255);
-    font-size: 13px;
-    font-weight: 600;
-    border-radius: 10px;
-    border: 2px solid black;
-    padding: 8px 12px;
-    text-align: center;
-    display: block;
-    width: 100%;
+#lampada:hover {
+    transform: scale(1.20);
 }
 
 
-
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
 
 
 
@@ -100,6 +104,11 @@ body{
     
     
 }
+
+#logo:hover {
+    transform: scale(1.05);
+}
+
 .card{
     background-color:var(--cor_estranha);
     width:250px;
@@ -107,38 +116,27 @@ body{
     border-radius: 15px;
     transition: transform 0.2s ease;
     border: 3px solid black;
-    margin: 50px;
     
 }
-
-#logo:hover, .card:hover{
+.card:hover {
     transform: scale(1.05);
 }
-
-
-a {
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-}
-
-
 ul {
-    margin: 80px;
     display: flex;
+    flex-direction: row;
     list-style: none;
+    justify-content: space-between;
     align-content: center;
     text-align: center;
     align-items: center;
 }
 
 .info {
+    
+    
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    margin-right: 70px;
+    
 }
 #titulo {
     
@@ -146,7 +144,7 @@ ul {
     text-align: center;
     align-items: center;
     font-size: 40px;
-    margin-top: 60px;
+    margin-bottom: 20px;
 }
 .cons_comodo {
     color:rgb(246, 154, 154);
@@ -159,60 +157,37 @@ ul {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     height: 50px;
-    width:100%
+    width:245px;
+}
+.graficos {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 150px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    margin: 10px;
 }
 
-.graficos{
-    display: flex;
-    align-items: flex-end;
-    width: 100%;
-    height: 100%;
-    gap: 10px;
-    justify-content: center;
-    margin-top: auto;
-}
-.barra{
-    background-color: yellow;
-    width: 60px;
-    background-color: yellow;
-    border-radius: 4px 4px 0 0;
-    border: 1px solid black;
-    transition: height 0.3s ease;
-}
-p{
-    display: flex;
-    flex-direction: column;
-    font-size: 15px;
-}
-.barra-wrapper {
+.barra-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
     height: 100%;
+    justify-content: flex-end;
     width: 30%;
 }
 
-.barra-wrapper p {
+.barra {
+    width: 100%;
+    background-color: var(--cor_menu);
+    border-radius: 4px 4px 0 0;
+    transition: height 0.3s ease;
+}
+
+.barra-item p {
     font-size: 11px;
     color: white;
     margin-top: 5px;
-    font-weight: bold;
-}
-
-
-#badge {
-    position: absolute;
-    top: -22px;
-    right: -22px;
-    background-color: red;
-    color: white;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 11px;
-    text-align: center;
 }
