@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: Inter;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
 }
 
 :root{
@@ -20,18 +21,19 @@ body{
 
 #cabecalho{
     position: sticky; top: 0; width: 100%; z-index: 1000;
-    height: 130px;
+    height: 10rem;
     background-color: var(--cor_cabeca);
     color: white;
     display: flex;
-    justify-content: space-between;
-    font-size: 30px;
+    justify-content: space-around;
     align-items: center;
+    font-size: 2rem;
+    gap:13rem;
 }
 #menu{
     border-radius: 10px;
-    width: 80px;
-    height: 80px;
+    width: 5rem;
+    height: 5rem;
 }
 #menu-container{
     position: relative;
@@ -107,7 +109,6 @@ body{
     border-radius: 15px;
     transition: transform 0.2s ease;
     border: 3px solid black;
-    margin: 50px;
     
 }
 
@@ -124,12 +125,15 @@ a {
 
 
 ul {
-    margin: 80px;
+    
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
-    align-content: center;
+    justify-content: center;
     text-align: center;
     align-items: center;
+    gap:2rem;
+    margin-top: 2rem;
 }
 
 .info {
@@ -138,15 +142,16 @@ ul {
     width: 100%;
     height: 100%;
     position: relative;
-    margin-right: 70px;
+    /* margin-right: 70px; */
 }
 #titulo {
-    
+    display: flex;
+    justify-content: center;
     color:rgb(0, 0, 0);
     text-align: center;
     align-items: center;
-    font-size: 40px;
-    margin-top: 60px;
+    font-size: 2.5rem;
+    margin-top: 60px    ;
 }
 .cons_comodo {
     color:rgb(246, 154, 154);
@@ -215,4 +220,14 @@ p{
     justify-content: center;
     font-size: 11px;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    #cabecalho {
+        font-size: 1rem;
+        gap:1.5rem;    
+    }
+    ul{
+        /* display: grid;  */
+    }
 }

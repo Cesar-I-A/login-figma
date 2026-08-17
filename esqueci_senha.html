@@ -6,7 +6,7 @@
     <title>Tela de login</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/3f21966000.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/esqueci_senha.css">
 </head>
     <body>
         <header id="cabecalho">
@@ -14,24 +14,26 @@
             <h1>Esqueci a minha senha </h1>
             <img src="assets/images/menu.PNG" alt=" icone de menu " id="menu">
     </header>
-        <form method="get" action=index.html>
-           
-
-            <label for="email">E-mail *</label><br><br>
-            <input type="email" id="email" placeholder="Digite seu email..." required><br><br>
-
-            <label for="senha">Senha *</label><br><br>
-            <input minlength="8" type="password" id="senha" placeholder="Digite sua senha..." required><br><br>
-
-            <label for="senha2">Confirme sua senha *</label><br><br>
-            <input minlength="8" type="password" id="senha2" placeholder="Digite sua senha novamente..." required><br><br>
-
-            <button type="submit">Redefinir senha</button>
+        <main>
+            <form method="get" action=index.html>
             
-    
-        </form>
-        <footer id=rodape>
-            <img id="logo" src="assets/images/logo.PNG" alt="logo da empresa" >
-        </footer>
+
+                <label for="email">E-mail *</label>
+                <input type="email" id="email" placeholder="Digite seu email..." required>
+
+                <label for="senha">Senha *</label>
+                <input minlength="8" type="password" id="senha" placeholder="Digite sua senha..." required>
+
+                <label for="senha2">Confirme sua senha *</label>
+                <input minlength="8" type="password" id="senha2" placeholder="Digite sua senha novamente..." required>
+
+                <button type="submit">Redefinir senha</button>
+                
+        
+            </form>
+        </main>
+            <footer id=rodape>
+                <img id="logo" src="assets/images/logo.PNG" alt="logo da empresa" >
+            </footer>
     </body>
 </html>
