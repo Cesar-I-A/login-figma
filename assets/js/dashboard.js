@@ -11,9 +11,9 @@ setInterval(function() {
    
     let date = new Date();
     const fusoHorario = date.getTimezoneOffset() / 60;
-    let minutos = date.getMinutes();
-    let hora = date.getHours() ;
+    let minutos = date.getMinutes().toString().padStart(2, '0');
+    let hora = date.getHours().toString().padStart(2, '0');
     let bem_vindo = document.getElementById("mensagem_entrada");
-    bem_vindo.textContent = `Olá, ${usuario} ${sobrenome}!  ${diasDaSemana[date.getDay()]}, ${date.toLocaleDateString()} - ${hora}:${minutos} (-${fusoHorario}:00)`;
+    bem_vindo.textContent = `Bem vindo\n ${usuario} ${sobrenome}!  ${diasDaSemana[date.getDay()]}, ${date.toLocaleDateString()} - ${hora}:${minutos} (-${fusoHorario}:00)`;
     
 }, 1000);
