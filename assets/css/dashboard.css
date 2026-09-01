@@ -238,13 +238,29 @@ p{
     font-size: 11px;
     text-align: center;
 }
+#mensagem_entrada {
+    position: relative;
+    font-size: 1.2rem;
+    color: white;
+    background-color: var(--cor_cabeca);
+    padding: 5px 10px;
+    width: 20vw;
+    height: 20vh;
+    border-radius: 5px;
+    margin: 20px auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
 
 @media (max-width: 768px) {
     #cabecalho {
         font-size: 1rem;
         gap:1.5rem;    
     }
-    ul{
-        /* display: grid;  */
+    #mensagem_entrada {
+        width: 60vw;
+        height: 10vh;
+        font-size: 1rem;
     }
 }
