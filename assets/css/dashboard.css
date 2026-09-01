@@ -15,9 +15,17 @@
 }
 
 body{
-    background-color: var(--cor_fundo);
-    
+    background-color: #0f0096;
+    background:linear-gradient(90deg,rgba(15, 0, 150, 1) 0%, rgb(3, 194, 146) 54%, rgba(60, 0, 255, 1) 100%);
+    color: #ffffff;
+    transition: background-color 0.5s ease, color 0.3s ease;
 }
+body.dark-theme {
+    background-color: #0e0564;
+    background:linear-gradient(90deg,rgb(38, 34, 78) 0%, rgb(148, 17, 235) 54%, rgba(60, 0, 255, 1) 100%);
+    transition: background-color 0.5s ease, color 0.3s ease;
+    color: #ffffff;
+  }
 
 #cabecalho{
     position: sticky; top: 0; width: 100%; z-index: 1000;
@@ -55,10 +63,15 @@ body{
     display: flex;
     flex-direction: column;
     padding: 12px;
+    font-size: 10rem;
+}
+label{
+    font-size: 1rem;
 }
 #lampada {
     width: 90px;
     height: 90px;
+    cursor: pointer;
     transition: transform 0.2s ease;
 }
 
@@ -82,6 +95,10 @@ body{
     text-align: center;
     display: block;
     width: 100%;
+    transition: transform 0.2s ease;
+}
+.text_menu:hover{
+    transform: scale(1.15);
 }
 
 
