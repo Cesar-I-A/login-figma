@@ -15,15 +15,18 @@
 }
 
 body{
-    background-color: #0f0096;
-    background:linear-gradient(90deg,rgba(15, 0, 150, 1) 0%, rgb(3, 194, 146) 54%, rgba(60, 0, 255, 1) 100%);
+    background: #2A7B9B;
+    background: -webkit-linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(42, 123, 155, 1) 100%);
+    background: -moz-linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(42, 123, 155, 1) 100%);
+    background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(42, 123, 155, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2A7B9B", endColorstr="#2A7B9B", GradientType=1);
     color: #ffffff;
-    transition: background-color 0.5s ease, color 0.3s ease;
+    transition: background-color 0.5s , color 0.3s ;
 }
 body.dark-theme {
     background-color: #0e0564;
     background:linear-gradient(90deg,rgb(38, 34, 78) 0%, rgb(148, 17, 235) 54%, rgba(60, 0, 255, 1) 100%);
-    transition: background-color 0.5s ease, color 0.3s ease;
+    transition: background-color 0.5s , color 0.3s ;
     color: #ffffff;
   }
 
@@ -239,8 +242,9 @@ p{
     text-align: center;
 }
 #mensagem_entrada {
+    display: flex;
     position: relative;
-    font-size: 1.2rem;
+    font-size: 2.5rem;
     color: white;
     background-color: var(--cor_cabeca);
     padding: 5px 10px;
@@ -306,6 +310,6 @@ caption {
     #mensagem_entrada {
         width: 60vw;
         height: 10vh;
-        font-size: 1rem;
+        font-size: 1.25rem;
     }
 }
