@@ -15,17 +15,17 @@
 }
 
 body{
-    background: #2A7B9B;
-    background: -webkit-linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(42, 123, 155, 1) 100%);
+    background: #33658A;
+    /* background: -webkit-linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(42, 123, 155, 1) 100%);
     background: -moz-linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(42, 123, 155, 1) 100%);
     background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(42, 123, 155, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2A7B9B", endColorstr="#2A7B9B", GradientType=1);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2A7B9B", endColorstr="#2A7B9B", GradientType=1); */
     color: #ffffff;
     transition: background-color 0.5s , color 0.3s ;
 }
 body.dark-theme {
-    background-color: #0e0564;
-    background:linear-gradient(90deg,rgb(38, 34, 78) 0%, rgb(148, 17, 235) 54%, rgba(60, 0, 255, 1) 100%);
+    background-color: #08074D;
+    /* background:linear-gradient(90deg,rgb(38, 34, 78) 0%, rgb(148, 17, 235) 54%, rgba(60, 0, 255, 1) 100%); */
     transition: background-color 0.5s , color 0.3s ;
     color: #ffffff;
   }
