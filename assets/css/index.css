@@ -53,7 +53,8 @@ main{
     flex-direction: column;
     align-items: center;
     background-color: var(--cor_menu);
-    width: 20vw;
+    width: 27vw;
+    height: 42vh;
     margin:auto;
     margin-top: 10vh;
     border-radius: 15px;
@@ -61,16 +62,23 @@ main{
     cursor: pointer;
 }
 
+#formulario-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 20vw;
+    max-height: fit-content;
+}
 
 
 input{
-    width: 300px;
-    height: 40px;
+    width: 14rem;
+    height: 3rem;
     border-radius: 5px;
     border: none;
-    margin: 20px;
+    margin: 20px auto;
     user-select: text;
-    font-size: 18px;
+    font-size: 2rem;
     text-align: center;
     padding: 10px;
     transition: transform 0.2s ease;
@@ -92,12 +100,12 @@ label{
 
 button{
     background-color:  #119DA4;
-    width: 90px;
-    height: 45px;
+    width: 6vw;
+    height: 3vh;
     border: none;
     border-radius: 15px;  
     font-size: 20px;
-    margin: 10px;
+    margin: auto 8vw;
     cursor: pointer;
     transition: transform 0.2s ease;
 }
@@ -109,7 +117,7 @@ button:hover {
 a {
     text-decoration: none;
     color: black;
-    margin: 20px;
+    margin: 15px 0  20px;
     font-size: 20px;
     transition: transform 0.2s ease;
 }
@@ -136,9 +144,20 @@ a:hover {
 #logo:hover {
     transform: scale(1.05);
 }
-#formulario label {
-    width: 300px;
-    text-align: left;
+#erroEmail,
+#erroSenha {
+    display: block;
+    color: red;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.invalido {
+    border: 2px solid red;
+}
+
+.valido {
+    border: 2px solid green;
 }
 
 @media (max-width: 768px) {
@@ -148,6 +167,7 @@ a:hover {
     }
     main{
         width: 20rem;
+        height: 30rem;
     }
     button{
         width:43vw ;
