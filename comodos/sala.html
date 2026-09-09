@@ -4,50 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de login</title>
-    <link rel="stylesheet" href="assets/css/comodos/sala.css">
+    <link rel="stylesheet" href="../assets/css/comodos/sala.css">
 </head>
     <body>
         <header id="cabecalho">
-                <img src="assets/images/lampada.PNG" alt="Imagem de lampada para trocar modo claro para modo escuro" id="lampada"></img>
-                <h1>Faça seu login </h1>
-                <img src="assets/images/menu.PNG" alt=" icone de menu " id="menu">
+                <img src="../assets/images/lampada.PNG" alt="Imagem de lampada para trocar modo claro para modo escuro" id="lampada"></img>
+                <h1>Dashboard Sala </h1>
+                <img src="../assets/images/menu.PNG" alt=" icone de menu " id="menu">
         </header>
         <main>
-            <div id="formulario-container">
-                <form id="formLogin" method="get" action="dashboard.html">
-                    <label class="form-label" for="email">E-mail *</label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Digite seu email..."
-                        required
-                    >
-                    <span id="erroEmail"></span>
+            <h1>Aparelhos do Cômodo</h1>
+            <div id="Aparelhos">
+                <button class="aparelho" data-aparelho="tv">
+                    SMART TV SAMSUNG
+                </button>
 
+                <button class="aparelho" data-aparelho="aspirador">
+                    ROBÔ ASPIRADOR DE PÓ
+                </button>
 
-                    <label class="form-label" for="senha">Senha *</label>
-                    <input
-                        type="password"
-                        id="senha"
-                        name="senha"
-                        placeholder="Digite sua senha..."
-                        minlength="8"
-                        required
-                    >
-                    <span id="erroSenha"></span>
+                <button class="aparelho" data-aparelho="ar">
+                    AR CONDICIONADO ELECTROLUX
+                </button>
 
+                <button class="aparelho" data-aparelho="persiana">
+                    PERSIANA ELÉTRICA MOTORIZADA
+                </button>
 
-                    <button type="submit">LOGIN</button>
+                <button class="aparelho" data-aparelho="lampada">
+                    LÂMPADA SMART INTELIGENTE
+                </button>
 
-                </form>
-                <a href="cadastro.html">Criar conta</a>
-                <a href="esqueci_senha.html">Esqueci minha senha</a>
+                <button class="aparelho" data-aparelho="interruptor">
+                    INTERRUPTOR INTELIGENTE
+                </button>
+
+                <button class="aparelho" data-aparelho="controle">
+                    CONTROLE REMOTO INTELIGENTE
+                </button>
+
+                <button class="aparelho" data-aparelho="poltrona">
+                    POLTRONA ELÉTRICA RECLINÁVEL
+                </button>
+            </div>
+            
+            <div id="divisoria"></div>
+            <div id="dadosUso">
+
+                <h2 id="tituloAparelho">
+                    Dados de Uso - Selecione um aparelho
+                </h2>
+
+                <div id="graficos">
+
+                    <div class="grafico">
+                        <h3>Consumo de energia</h3>
+                        <canvas id="graficoConsumo"></canvas>
+                    </div>
+
+                    <div class="grafico">
+                        <h3>Consumo de energia</h3>
+                        <canvas id="graficoDiario"></canvas>
+                    </div>
+
+                    <div class="grafico">
+                        <h3>Horário de pico de uso</h3>
+                        <canvas id="graficoHorario"></canvas>
+                    </div>
+
+                </div>
+
+            </div>
+
             </div>
         </main>
         <footer id=rodape>
-            <img id="logo" src="assets/images/logo.PNG" alt="logo da empresa" >
+            <img id="logo" src="../assets/images/logo.PNG" alt="logo da empresa" >
         </footer>
-         <script src="assets/js/comodos/sala.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+         <script src="../assets/js/comodos/sala.js"></script>
     </body>
 </html>

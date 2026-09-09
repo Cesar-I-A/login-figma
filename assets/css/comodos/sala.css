@@ -10,6 +10,9 @@
     --cor_fundo: #33658A;
     --cor_cabeca: #1A3342;
     --cor_menu: #86BBD8;
+    --cor_cinza: #626260;
+    --cor_estranha: #03888D;
+    --cor_botao: #626260b0 ;
 }
 
 body{
@@ -62,73 +65,88 @@ main{
     flex-direction: column;
     align-items: center;
     background-color: var(--cor_menu);
-    width: 24vw;
-    height: 42vh;
+    height: 60vh;
     margin:auto;
     margin-top: 10vh;
     border-radius: 15px;
     font-size: 25px;
     cursor: pointer;
 }
-
-#formulario-container{
+#Aparelhos {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 90%;
+    gap: 40px;
+}
+#lado_esquerdo,
+#lado_direito {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    max-width: 20vw;
-    max-height: fit-content;
+
+    width: 45%;
+    gap: 20px;
 }
-
-
-input{
+.aparelho {
     width: 100%;
-    height: 3rem;
-    border-radius: 5px;
+    min-height: 70px;
+
+    background-color: var(--cor_botao);
     border: none;
-    margin: 20px auto;
-    user-select: text;
-    font-size: 2rem;
-    text-align: center;
-    padding: 10px;
-    transition: transform 0.2s ease;
+    border-radius: 15px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-input:hover {
+.aparelho:hover {
     transform: scale(1.05);
 }
-
-::placeholder{
-    font-size: 20px;
-}
-
-label{
-    display: flex;
-    font-size: 25px;
-    cursor: pointer;
-}
-
-button{
-    background-color:  #119DA4;
-    width: 6vw;
-    height: 3vh;
-    border: none;
-    border-radius: 15px;  
-    font-size: 20px;
-    margin: auto 8vw;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-button:hover {
-    transform: scale(1.05);
-}
-
 a {
     text-decoration: none;
     color: black;
     margin: 15px 0  20px;
     font-size: 20px;
     transition: transform 0.2s ease;
+}
+#dadosUso {
+    width: 50%;
+    min-height: 400px;
+    padding: 20px;
+}
+
+#dadosUso h2 {
+    margin-bottom: 25px;
+}
+
+#graficos {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.grafico {
+    background-color: #d3d3d3;
+    width: 33%;
+    height: 275px;
+    padding: 8px;
+}
+
+.grafico h3 {
+    font-size: 15px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.grafico canvas {
+    width: 100% !important;
+    height: 210px !important;
 }
 
 a:hover {
@@ -170,18 +188,7 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-    #input{
-        width: 14rem;
-        height: 3rem;
-        border-radius: 5px;
-        border: none;
-        margin: 20px auto;
-        user-select: text;
-        font-size: 2rem;
-        text-align: center;
-        padding: 10px;
-        transition: transform 0.2s ease;
-    }
+    
     #cabecalho {
         font-size: 1rem;
         gap:1.5rem;    
@@ -190,7 +197,5 @@ a:hover {
         width: 20rem;
         height: 30rem;
     }
-    button{
-        width:43vw ;
-    }
+   
 }
