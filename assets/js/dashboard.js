@@ -29,7 +29,7 @@ setInterval(function() {
 
 botaoDark.addEventListener('click', () => {
     document.body.classList.toggle('dark-theme');
-    document.lampada.classList.toggle('dark-theme');
+    
     const modoEscuroAtivo = document.body.classList.contains('dark-theme');
     localStorage.setItem('tema', modoEscuroAtivo ? 'escuro' : 'claro');
 });

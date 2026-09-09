@@ -13,8 +13,14 @@
 
 body{
     background-color: var(--cor_fundo);
+    transition: background-color 0.5s , color 0.3s ;
     justify-content: center;
 }
+body.dark-theme {
+    background-color: #08074D;
+    transition: background-color 0.5s , color 0.3s ;
+    color: #ffffff;
+  }
 
 #cabecalho{
     position: sticky; top: 0; width: 100%; z-index: 1000;
