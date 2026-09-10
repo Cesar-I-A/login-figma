@@ -8,46 +8,104 @@
 </head>
     <body>
         <header id="cabecalho">
-                <img src="../assets/images/lampada.PNG" alt="Imagem de lampada para trocar modo claro para modo escuro" id="lampada"></img>
-                <h1>Faça seu login </h1>
+            <img src="../assets/images/lampada.PNG" alt="Imagem de lampada para trocar modo claro para modo escuro" id="lampada"></img>
+            <h1>Dashboard Geral Quarto</h1>
+            <div id="menu-container">
                 <img src="../assets/images/menu.PNG" alt=" icone de menu " id="menu">
-        </header>
-        <main>
-            <div id="formulario-container">
-                <form id="formLogin" method="get" action="dashboard.html">
-                    <label class="form-label" for="email">E-mail *</label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Digite seu email..."
-                        required
-                    >
-                    <span id="erroEmail"></span>
-
-
-                    <label class="form-label" for="senha">Senha *</label>
-                    <input
-                        type="password"
-                        id="senha"
-                        name="senha"
-                        placeholder="Digite sua senha..."
-                        minlength="8"
-                        required
-                    >
-                    <span id="erroSenha"></span>
-
-
-                    <button type="submit">LOGIN</button>
-
-                </form>
-                <a href="cadastro.html">Criar conta</a>
-                <a href="esqueci_senha.html">Esqueci minha senha</a>
+                <div id="menu_aberto">
+                    <a class="text_menu" id="choose_room"href="../dashboard.html">Escolher comodo</a>
+                    <a class="text_menu" id="config_room"href="#">Gerenciar comodo</a>
+                    <a class="text_menu" id="leave_room" href="../index.html">Desconectar</a>
+                   
+                </div>
             </div>
+        </header>
+        <main id="Aparelhos">
+
+            <section id="lado_esquerdo">
+
+                <h1>Aparelhos do Cômodo</h1>
+
+                <div id="listaAparelhos">
+
+                    <button class="aparelho" data-aparelho="tv">
+                        TV QLED SAMSUNG
+                    </button>
+
+
+                    <button class="aparelho" data-aparelho="ar">
+                        AR CONDICIONADO ELECTROLUX
+                    </button>
+
+                    <button class="aparelho" data-aparelho="persiana">
+                        PERSIANA ELÉTRICA MOTORIZADA
+                    </button>
+
+                    <button class="aparelho" data-aparelho="lampada">
+                        LUZ DO TETO 
+                    </button>
+
+
+                </div>
+
+            </section>
+
+
+            <section id="lado_direito">
+
+                <h1 id="tituloAparelho">
+                    Dados de Uso - Selecione um aparelho
+                </h1>
+
+                <div id="graficos">
+
+                    <div class="grafico">
+
+                        <h3>
+                            Consumo de energia
+                        </h3>
+
+                        <div class="areaGrafico">
+                            <canvas id="graficoConsumo"></canvas>
+                        </div>
+
+                    </div>
+
+
+                    <div class="grafico">
+
+                        <h3>
+                            Consumo de energia
+                        </h3>
+
+                        <div class="areaGrafico">
+                            <canvas id="graficoDiario"></canvas>
+                        </div>
+
+                    </div>
+
+
+                    <div class="grafico">
+
+                        <h3>
+                            Horário de pico de uso
+                        </h3>
+
+                        <div class="areaGrafico">
+                            <canvas id="graficoHorario"></canvas>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
         </main>
         <footer id=rodape>
             <img id="logo" src="../assets/images/logo.PNG" alt="logo da empresa" >
         </footer>
-         <script src="../assets/js/comodos/quarto.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="../assets/js/comodos/quarto.js"></script>
     </body>
 </html>

@@ -1,3 +1,4 @@
+
 *{
     padding:0%;
     margin: 0;
@@ -6,191 +7,503 @@
     grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
 }
 
-:root{
+
+
+
+:root {
     --cor_fundo: #33658A;
     --cor_cabeca: #1A3342;
     --cor_menu: #86BBD8;
+    --cor_cinza: #626260;
+    --cor_estranha: #03888D;
+    --cor_botao: #626260;
 }
 
-body{
-    background-color: #33658A;
+
+
+body {
+    background-color: var(--cor_fundo);
     color: #000000;
-    transition: background-color 0.5s , color 0.3s ;
-    justify-content: center;
+
+    transition:
+        background-color 0.5s,
+        color 0.3s;
+
+    min-height: 100vh;
 }
+
+
 body.dark-theme {
     background-color: #08074D;
-    transition: background-color 0.5s , color 0.3s ;
     color: #ffffff;
-  }
+}
 
-#cabecalho{
-    position: sticky; top: 0; width: 100%; z-index: 1000;
+
+
+#cabecalho {
+    position: sticky;
+    top: 0;
+
+    width: 100%;
     height: 10rem;
+
+    z-index: 1000;
+
     background-color: var(--cor_cabeca);
     color: white;
+
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    font-size: 2rem;
-    gap:13rem;
+    justify-content: space-between;
+
+     padding: 0 35px; /*Para não deixar os elementos grudados na borda da tela */
 }
+
+
 
 #lampada {
     width: 90px;
     height: 90px;
+
     cursor: pointer;
+
     transition: transform 0.2s ease;
 }
+
 #lampada:hover {
-    transform: scale(1.20);
+    transform: scale(1.15);
 }
+
 
 #menu{
     border-radius: 10px;
-    width: 90px;
-    height: 90px;
-
+    width: 5rem;
+    height: 5rem;
 }
-#menu:hover {
-    transform: scale(1.20);
+#menu-container{
+    position: relative;
+    border-radius: 10px;
+    width: 80px;
+    height: 80px;
 }
 
-main{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--cor_menu);
-    width: 24vw;
-    height: 42vh;
-    margin:auto;
-    margin-top: 10vh;
+#menu_aberto{
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+    background-color: var(--cor_cinza);
+    width: 200px;
     border-radius: 15px;
-    font-size: 25px;
-    cursor: pointer;
-}
-
-#formulario-container{
+    position: absolute;
+    right: 0;
+    gap: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    max-width: 20vw;
-    max-height: fit-content;
+    padding: 12px;
+    font-size: 10rem;
+}
+#menu:hover, #lampada:hover {
+    transform: scale(1.15);
 }
 
-
-input{
-    width: 100%;
-    height: 3rem;
-    border-radius: 5px;
-    border: none;
-    margin: 20px auto;
-    user-select: text;
-    font-size: 2rem;
+#menu-container:hover #menu_aberto {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(5px);
+}
+.text_menu{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 8px 12px;
     text-align: center;
-    padding: 10px;
+    display: block;
+    width: 100%;
     transition: transform 0.2s ease;
 }
-
-input:hover {
-    transform: scale(1.05);
+.text_menu:hover{
+    transform: scale(1.15);
 }
 
-::placeholder{
-    font-size: 20px;
-}
 
-label{
+#Aparelhos {
     display: flex;
-    font-size: 25px;
-    cursor: pointer;
+
+    width: 100%;
+
+    min-height: calc(100vh - 10rem);
+
+    margin-top: 5rem;
+
+
+    color: white;
 }
 
-button{
-    background-color:  #119DA4;
-    width: 6vw;
-    height: 3vh;
+
+
+#lado_esquerdo {
+    width: 50%;
+
+    padding: 25px;
+
+    border-right: 5px solid #d3d3d3;
+}
+
+
+
+
+#lado_esquerdo h1 {
+    margin-bottom: 25px;
+
+    text-align: center;
+
+    color: white;
+
+    font-size: 30px;
+
+    font-weight: normal;
+}
+
+
+
+#listaAparelhos {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 16px 20px;
+
+    width: 100%;
+}
+
+
+
+.aparelho {
+    width: 100%;
+    min-height: 64px;
+
+    padding: 10px 14px;
+
+    background-color: var(--cor_botao);
+
+    color: white;
+
     border: none;
-    border-radius: 15px;  
-    font-size: 20px;
-    margin: auto 8vw;
+
+    border-radius: 0;
+
+   
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    text-align: left;
+
     cursor: pointer;
-    transition: transform 0.2s ease;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
 }
 
-button:hover {
+
+.aparelho:hover {
+    background-color: #707070;
+
+    transform: scale(1.02);
+}
+.aparelho.selecionado {
+    background-color: #3f3f3f;
+
+    border: 3px solid #86BBD8;
+
+    box-shadow: 0 0 10px rgba(134, 187, 216, 0.7);
+
+    transform: scale(1.02);
+}
+
+.aparelho:active {
+    transform: scale(0.98);
+}
+
+
+/* =========================================
+   LADO DIREITO
+========================================= */
+
+#lado_direito {
+    width: 50%;
+
+    padding: 25px 30px;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   TÍTULO DOS DADOS
+========================================= */
+
+#lado_direito h1 {
+    margin-bottom: 28px;
+
+    text-align: center;
+
+    color: white;
+
+    font-family:  Inter;
+
+    font-size: 30px;
+
+    font-weight: normal;
+}
+
+
+/* =========================================
+   ÁREA DOS GRÁFICOS
+========================================= */
+
+#graficos {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 10px;
+
+    width: 100%;
+}
+
+
+/* =========================================
+   CADA GRÁFICO
+========================================= */
+
+.grafico {
+    width: 100%;
+    height: 305px;
+
+    padding: 8px;
+
+    background-color: #d3d3d3;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   TÍTULO DO GRÁFICO
+========================================= */
+
+.grafico h3 {
+    height: 45px;
+
+    margin: 0;
+
+    color: #111111;
+
+    font-family: Inter;
+
+    font-size: 20px;
+
+    font-weight: normal;
+
+    line-height: 18px;
+}
+
+
+/* =========================================
+   ÁREA DO CANVAS
+========================================= */
+
+.areaGrafico {
+    position: relative;
+
+    width: 100%;
+    height: 245px;
+}
+
+
+.areaGrafico canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+#logo {
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+
+    transition: transform 0.2s ease;
+
+    z-index: 500;
+}
+
+
+#logo:hover {
     transform: scale(1.05);
 }
+
+
+/* =========================================
+   LINKS
+========================================= */
 
 a {
     text-decoration: none;
+
     color: black;
-    margin: 15px 0  20px;
+
+    margin: 15px 0 20px;
+
     font-size: 20px;
+
     transition: transform 0.2s ease;
 }
+
 
 a:hover {
     transform: scale(1.05);
 }
 
 
-#logo {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    transition: transform 0.2s ease;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    text-align: center;
-    align-items: center;
-    
-    
-}
+/* =========================================
+   ERROS
+========================================= */
 
-#logo:hover {
-    transform: scale(1.05);
-}
 #erroEmail,
 #erroSenha {
     display: block;
+
     color: red;
+
     font-size: 15px;
+
     margin-bottom: 10px;
 }
+
 
 .invalido {
     border: 2px solid red;
 }
 
+
 .valido {
     border: 2px solid green;
 }
 
-@media (max-width: 768px) {
-    #input{
-        width: 14rem;
-        height: 3rem;
-        border-radius: 5px;
-        border: none;
-        margin: 20px auto;
-        user-select: text;
-        font-size: 2rem;
-        text-align: center;
-        padding: 10px;
-        transition: transform 0.2s ease;
-    }
+
+/* =========================================
+   RESPONSIVIDADE - TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
     #cabecalho {
-        font-size: 1rem;
-        gap:1.5rem;    
+        height: 8rem;
+
+        padding: 0 20px;
     }
-    main{
-        width: 20rem;
-        height: 30rem;
+
+
+    #lampada,
+    #menu {
+        width: 70px;
+        height: 70px;
     }
-    button{
-        width:43vw ;
+
+
+    #Aparelhos {
+        flex-direction: column;
+
+        margin-top: 3rem;
     }
+
+
+    #lado_esquerdo,
+    #lado_direito {
+        width: 100%;
+    }
+
+
+    #lado_esquerdo {
+        border-right: none;
+
+        border-bottom: 5px solid #d3d3d3;
+    }
+
+
+    #graficos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVIDADE - CELULAR
+========================================= */
+
+@media (max-width: 600px) {
+
+    #cabecalho {
+        height: 6rem;
+    }
+
+
+    #cabecalho h1 {
+        font-size: 1.5rem;
+    }
+
+
+    #lampada,
+    #menu {
+        width: 50px;
+        height: 50px;
+    }
+
+
+    #Aparelhos {
+        margin-top: 2rem;
+    }
+
+
+    #listaAparelhos {
+        grid-template-columns: 1fr;
+    }
+
+
+    #graficos {
+        grid-template-columns: 1fr;
+    }
+
+
+    #lado_esquerdo h1 {
+        font-size: 25px;
+    }
+
+
+    #lado_direito h1 {
+        font-size: 22px;
+    }
+
+
+    .grafico {
+        height: 300px;
+    }
+
 }

@@ -8,80 +8,118 @@
 </head>
     <body>
         <header id="cabecalho">
-                <img src="../assets/images/lampada.PNG" alt="Imagem de lampada para trocar modo claro para modo escuro" id="lampada"></img>
-                <h1>Dashboard Sala </h1>
+            <img src="../assets/images/lampada.PNG" alt="Imagem de lampada para trocar modo claro para modo escuro" id="lampada"></img>
+            <h1>Dashboard Geral</h1>
+            <div id="menu-container">
                 <img src="../assets/images/menu.PNG" alt=" icone de menu " id="menu">
-        </header>
-        <main>
-            <h1>Aparelhos do Cômodo</h1>
-            <div id="Aparelhos">
-                <button class="aparelho" data-aparelho="tv">
-                    SMART TV SAMSUNG
-                </button>
-
-                <button class="aparelho" data-aparelho="aspirador">
-                    ROBÔ ASPIRADOR DE PÓ
-                </button>
-
-                <button class="aparelho" data-aparelho="ar">
-                    AR CONDICIONADO ELECTROLUX
-                </button>
-
-                <button class="aparelho" data-aparelho="persiana">
-                    PERSIANA ELÉTRICA MOTORIZADA
-                </button>
-
-                <button class="aparelho" data-aparelho="lampada">
-                    LÂMPADA SMART INTELIGENTE
-                </button>
-
-                <button class="aparelho" data-aparelho="interruptor">
-                    INTERRUPTOR INTELIGENTE
-                </button>
-
-                <button class="aparelho" data-aparelho="controle">
-                    CONTROLE REMOTO INTELIGENTE
-                </button>
-
-                <button class="aparelho" data-aparelho="poltrona">
-                    POLTRONA ELÉTRICA RECLINÁVEL
-                </button>
+                <div id="menu_aberto">
+                    <a class="text_menu" id="choose_room"href="../dashboard.html">Escolher comodo</a>
+                    <a class="text_menu" id="config_room"href="#">Gerenciar comodo</a>
+                    <a class="text_menu" id="leave_room" href="../index.html">Desconectar</a>
+                   
+                </div>
             </div>
-            
-            <div id="divisoria"></div>
-            <div id="dadosUso">
+        </header>
+        <main id="Aparelhos">
 
-                <h2 id="tituloAparelho">
+            <section id="lado_esquerdo">
+
+                <h1>Aparelhos do Cômodo</h1>
+
+                <div id="listaAparelhos">
+
+                    <button class="aparelho" data-aparelho="tv">
+                        SMART TV SAMSUNG
+                    </button>
+
+                    <button class="aparelho" data-aparelho="aspirador">
+                        ROBÔ ASPIRADOR DE PÓ
+                    </button>
+
+                    <button class="aparelho" data-aparelho="ar">
+                        AR CONDICIONADO ELECTROLUX
+                    </button>
+
+                    <button class="aparelho" data-aparelho="persiana">
+                        PERSIANA ELÉTRICA MOTORIZADA
+                    </button>
+
+                    <button class="aparelho" data-aparelho="lampada">
+                        LÂMPADA SMART INTELIGENTE
+                    </button>
+
+                    <button class="aparelho" data-aparelho="interruptor">
+                        INTERRUPTOR INTELIGENTE
+                    </button>
+
+                    <button class="aparelho" data-aparelho="controle">
+                        CONTROLE REMOTO INTELIGENTE
+                    </button>
+
+                    <button class="aparelho" data-aparelho="poltrona">
+                        POLTRONA ELÉTRICA RECLINÁVEL
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <section id="lado_direito">
+
+                <h1 id="tituloAparelho">
                     Dados de Uso - Selecione um aparelho
-                </h2>
+                </h1>
 
                 <div id="graficos">
 
                     <div class="grafico">
-                        <h3>Consumo de energia</h3>
-                        <canvas id="graficoConsumo"></canvas>
+
+                        <h3>
+                            Consumo de energia
+                        </h3>
+
+                        <div class="areaGrafico">
+                            <canvas id="graficoConsumo"></canvas>
+                        </div>
+
                     </div>
 
-                    <div class="grafico">
-                        <h3>Consumo de energia</h3>
-                        <canvas id="graficoDiario"></canvas>
-                    </div>
 
                     <div class="grafico">
-                        <h3>Horário de pico de uso</h3>
-                        <canvas id="graficoHorario"></canvas>
+
+                        <h3>
+                            Consumo de energia
+                        </h3>
+
+                        <div class="areaGrafico">
+                            <canvas id="graficoDiario"></canvas>
+                        </div>
+
+                    </div>
+
+
+                    <div class="grafico">
+
+                        <h3>
+                            Horário de pico de uso
+                        </h3>
+
+                        <div class="areaGrafico">
+                            <canvas id="graficoHorario"></canvas>
+                        </div>
+
                     </div>
 
                 </div>
 
-            </div>
+            </section>
 
-            </div>
         </main>
         <footer id=rodape>
             <img id="logo" src="../assets/images/logo.PNG" alt="logo da empresa" >
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-         <script src="../assets/js/comodos/sala.js"></script>
+        <script src="../assets/js/comodos/sala.js"></script>
     </body>
 </html>
