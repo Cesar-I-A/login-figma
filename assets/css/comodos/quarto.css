@@ -80,12 +80,7 @@ body.dark-theme {
     width: 5rem;
     height: 5rem;
 }
-#menu-container{
-    position: relative;
-    border-radius: 10px;
-    width: 80px;
-    height: 80px;
-}
+
 
 #menu_aberto{
     opacity: 0;
