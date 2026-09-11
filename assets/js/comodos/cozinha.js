@@ -26,8 +26,8 @@ if (localStorage.getItem("tema") === "escuro") {
 
 const dadosAparelhos = {
 
-    tv: {
-        nome: "Smart TV Samsung",
+    cafeteira: {
+        nome: "Cafeteira Smart",
 
         usuarios: [
             {
@@ -50,32 +50,10 @@ const dadosAparelhos = {
     },
 
 
-    aspirador: {
-        nome: "Robô aspirador de pó",
+    
 
-        usuarios: [
-            {
-                nome: "Felipe",
-                consumo: 5
-            },
-            {
-                nome: "João",
-                consumo: 1
-            },
-            {
-                nome: "Maria",
-                consumo: 3
-            }
-        ],
-
-        diario: [1, 2, 1, 3, 2, 4, 2],
-
-        horario: [2, 5, 3, 6, 4, 2, 1]
-    },
-
-
-    ar: {
-        nome: "Ar condicionado Electrolux",
+    panela: {
+        nome: "Panela Elétrica",
 
         usuarios: [
             {
@@ -98,8 +76,8 @@ const dadosAparelhos = {
     },
 
 
-    persiana: {
-        nome: "Persiana elétrica motorizada",
+    ar: {
+        nome: "AirFryer",
 
         usuarios: [
             {
@@ -122,100 +100,13 @@ const dadosAparelhos = {
     },
 
 
-    lampada: {
-        nome: "Lâmpada SMART inteligente",
-
-        usuarios: [
-            {
-                nome: "Felipe",
-                consumo: 1
-            },
-            {
-                nome: "João",
-                consumo: 2
-            },
-            {
-                nome: "Maria",
-                consumo: 1
-            }
-        ],
-
-        diario: [1, 9, 5, 1, 2, 3, 1],
-
-        horario: [1, 1, 1, 1, 1, 1, 1]
-    },
+    
 
 
-    interruptor: {
-        nome: "Interruptor inteligente",
-
-        usuarios: [
-            {
-                nome: "Felipe",
-                consumo: 0.5
-            },
-            {
-                nome: "João",
-                consumo: 1
-            },
-            {
-                nome: "Maria",
-                consumo: 0.8
-            }
-        ],
-
-        diario: [1, 4, 2, 1, 3, 2, 1],
-
-        horario: [1, 1, 1, 1, 1, 1, 1]
-    },
+    
 
 
-    controle: {
-        nome: "Controle remoto universal",
-
-        usuarios: [
-            {
-                nome: "Felipe",
-                consumo: 0.7
-            },
-            {
-                nome: "João",
-                consumo: 0.2
-            },
-            {
-                nome: "Maria",
-                consumo: 0.1
-            }
-        ],
-
-        diario: [1, 3, 5, 6, 1, 2, 1],
-
-        horario: [1, 2, 3, 4, 5, 6, 7]
-    },
-
-
-    poltrona: {
-        nome: "Poltrona elétrica reclinável",
-
-        usuarios: [
-            {
-                nome: "Felipe",
-                consumo: 5
-            },
-            {
-                nome: "João",
-                consumo: 6
-            },
-            {
-                nome: "Maria",
-                consumo: 5
-            }
-        ],
-
-        diario: [1, 2, 1, 3, 2, 1, 2],
-
-        horario: [1, 2, 3, 4, 5, 6, 7]
-    }
+   
 
 };
 
