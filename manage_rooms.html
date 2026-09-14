@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Cômodos e Dispositivos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3f21966000.js" crossorigin="anonymous"></script>
+    <!-- Chart.js para renderizar os gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="assets/css/manage_rooms.css">
+</head>
+<body>
+     <header id="cabecalho">
+            <img src="assets/images/lampada.PNG" alt="Imagem de lampada para trocar modo claro para modo escuro" id="lampada"></img>
+            <h1>Gerenciar Cômodos e Dispositivos</h1>
+            <div id="menu-container">
+                <img src="assets/images/menu.PNG" alt=" icone de menu " id="menu">
+                <div id="menu_aberto">
+                    <a class="text_menu" id="choose_room"href="dashboard.html">Escolher comodo</a>
+                    <a class="text_menu" id="leave_room" href="index.html">Desconectar</a>
+                   
+                </div>
+            </div>
+        </header>
+
+    <main class="container">
+        <!-- SEÇÃO: GERENCIAR CÔMODOS -->
+        <section class="card-painel">
+            <h2><i class="fa-solid fa-house"></i> Gerenciar Cômodos</h2>
+            <form id="form-comodo" class="formulario">
+                <input type="text" id="nome-comodo" placeholder="Nome do Cômodo (ex: Sala de Estar)" required>
+                <button type="submit" class="btn btn-primary"><i class="fa-solid fa-plus"></i> Adicionar Cômodo</button>
+            </form>
+
+            <ul id="lista-comodos" class="lista-cards">
+                <!-- Lista dinamicamente preenchida via JS -->
+            </ul>
+        </section>
+
+        <!-- SEÇÃO: GERENCIAR DISPOSITIVOS -->
+        <section class="card-painel">
+            <h2><i class="fa-solid fa-plug"></i> Gerenciar Dispositivos</h2>
+            <form id="form-dispositivo" class="formulario">
+                <select id="select-comodo" required>
+                    <option value="">Selecione um Cômodo...</option>
+                </select>
+                <input type="text" id="nome-dispositivo" placeholder="Nome do Dispositivo (ex: AirFryer)" required>
+                <button type="submit" class="btn btn-primary"><i class="fa-solid fa-plus"></i> Adicionar Dispositivo</button>
+            </form>
+
+            <div id="container-dispositivos" class="botoes-dispositivos">
+                <!-- Botoes de dispositivos dinâmicos -->
+            </div>
+        </section>
+
+        <!-- SEÇÃO: VISUALIZAÇÃO DE DADOS & GRÁFICOS -->
+        <section class="card-painel">
+            <h2 id="tituloAparelho">Selecione um dispositivo para ver os dados</h2>
+            <div class="grid-graficos">
+                <div class="box-grafico">
+                    <h3>Consumo por Usuário</h3>
+                    <canvas id="graficoConsumo"></canvas>
+                </div>
+                <div class="box-grafico">
+                    <h3>Uso Diário</h3>
+                    <canvas id="graficoDiario"></canvas>
+                </div>
+                <div class="box-grafico">
+                    <h3>Uso Horário</h3>
+                    <canvas id="graficoHorario"></canvas>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/manage_rooms.js"></script>
+</body>
+</html>
